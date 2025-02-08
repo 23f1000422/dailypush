@@ -28,4 +28,5 @@ jobs:
         run: |
           git add last_run.txt
           git commit -m "Automated daily commit at $(date)" || echo "No changes to commit"
+          git pull --rebase  # Pull the latest changes from the remote repository
           git push
